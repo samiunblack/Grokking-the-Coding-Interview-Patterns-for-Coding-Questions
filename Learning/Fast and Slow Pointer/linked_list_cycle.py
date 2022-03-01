@@ -30,4 +30,3 @@ def main():
     head.next.next.next.next.next.next = head.next.next.next
     print(has_cycle(head))
 
-main()
