@@ -33,4 +33,4 @@ def main():
     result = reverse_linkedList(head)
     result.print_list()
     
-main()
+
