@@ -34,4 +34,3 @@ def main():
     
     reverse(head).print_list()
     
-main()
