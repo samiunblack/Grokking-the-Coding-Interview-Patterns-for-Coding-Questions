@@ -1,20 +1,12 @@
 from reverse_linkedList import Node
 
-def reverse_sublist(head, p, q):
-    prev = None
-    current = head
+def reverse_first_k_elements(head, k):
+    prev, current = None, head
     
-    i = 1
-    while current is not None and i < p:
-        prev = current
-        current = current.next
-        
-        i += 1
-    
-    first_part = prev
     last_part = current
     
-    while current is not None and i < q + 1:
+    i = 1
+    while current is not None and i <= k:
         next = current.next
         current.next = prev
         prev = current
@@ -22,12 +14,12 @@ def reverse_sublist(head, p, q):
         
         i += 1
     
-    first_part.next = prev
+    head = prev
     last_part.next = current
     
     return head
 
-    
+
 def main():
     head = Node(1)
     head.next = Node(2)
@@ -37,7 +29,6 @@ def main():
 
     head.print_list()
     
-    reverse_sublist(head, 2, 4).print_list()
-    
+    reverse_first_k_elements(head, 4).print_list()
+
 main()
-        
