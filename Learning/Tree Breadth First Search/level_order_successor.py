@@ -5,7 +5,6 @@ class TreeNode:
 
 def level_order_successor(root, node):
     queue = [root]
-    node_found = False
     
     while len(queue) > 0:
         level_size = len(queue)
@@ -13,16 +12,15 @@ def level_order_successor(root, node):
         for _ in range(level_size):
             current = queue.pop(0)
             
-            if current.val == node:
-                node_found = True
-            
             if current.left:
                 queue.append(current.left)
             if current.right:
                 queue.append(current.right)
             
-            if node_found == True:
-                return queue[0].val
+            if current.val == node:
+                break
+            
+        return queue[0].val if queue else None
 
 
 def main():
