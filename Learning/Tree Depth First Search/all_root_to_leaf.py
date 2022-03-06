@@ -13,9 +13,9 @@ def find_all_paths(root, all_paths, current_path=[]):
     
     if root.left is None and root.right is None:
         all_paths.append(list(current_path))
-    
-    find_all_paths(root.left, all_paths, current_path)
-    find_all_paths(root.right, all_paths, current_path)
+    else:
+        find_all_paths(root.left, all_paths, current_path)
+        find_all_paths(root.right, all_paths, current_path)
     
     del current_path[-1]
     
