@@ -1,6 +1,6 @@
 #Solution
 # keep the non repeating characters in a hashmap
-#if character is in the hashmap then keep removing elements from the beginning
+#if character is in the hashmap then shrink the window until there is no repeat
 #until all is non repeating in the hashmap
 
 def no_repeat_substring(str):
