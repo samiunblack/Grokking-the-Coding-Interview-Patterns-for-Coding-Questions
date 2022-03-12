@@ -1,3 +1,5 @@
+arr = [] #some elements
+
 #core pattern
 window_sum, window_start = 0
 
